@@ -1,0 +1,44 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban DWEC</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Kanban Síncrono</h1>
+    </header>
+
+    <form id="task-form">
+      <input
+        type="text"
+        id="task-title"
+        placeholder="Título de la tarea"
+        required=""
+      />
+      <select id="task-priority">
+        <option value="baja">Baja</option>
+        <option value="media" selected="">Media</option>
+        <option value="alta">Alta</option>
+      </select>
+      <button type="submit">Añadir</button>
+    </form>
+
+    <main class="kanban-board">
+      <section class="column" id="todo">
+        <h2>Por hacer</h2>
+      </section>
+
+      <section class="column" id="in-progress">
+        <h2>En proceso</h2>
+      </section>
+
+      <section class="column" id="done">
+        <h2>Hecho</h2>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

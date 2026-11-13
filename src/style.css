@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0079bf;
+  color: #172b4d;
+  min-height: 100vh;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.75rem 1rem;
+}
+header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#task-form {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+#task-form input {
+  flex: 1;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+}
+#task-form select,
+#task-form button {
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+#task-form button {
+  background: #5aac44;
+  color: #fff;
+  font-weight: 600;
+}
+#task-form button:hover {
+  background: #61bd4f;
+}
+
+.kanban-board {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  overflow-x: auto;
+}
+.column {
+  background: #ebecf0;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  width: 272px;
+  flex-shrink: 0;
+  min-height: 100px;
+}
+.column h2 {
+  margin: 0.25rem 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #5e6c84;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.3rem;
+  padding: 0.6rem 0.7rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  cursor: pointer;
+}
+.card:hover {
+  background: #f4f5f7;
+}
+.card-title {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.2rem;
+  margin-right: 0.3rem;
+  font-weight: 600;
+}
+.badge-alta {
+  background: #ffebe6;
+  color: #bf2600;
+}
+.badge-media {
+  background: #fff0b3;
+  color: #974f0c;
+}
+.badge-baja {
+  background: #e3fcef;
+  color: #006644;
+}
+.card-actions {
+  display: flex;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+.btn-prev,
+.btn-next,
+.btn-delete {
+  border: none;
+  background: transparent;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #5e6c84;
+}
+.btn-prev:hover,
+.btn-next:hover {
+  background: #dfe1e6;
+}
+.btn-delete:hover {
+  background: #ffebe6;
+  color: #bf2600;
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+  }
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.edit-form input,
+.edit-form select {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #c1c7d0;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+.edit-form input:focus,
+.edit-form select:focus {
+  outline: none;
+  border-color: #0079bf;
+}
+.edit-form input.edit-error-input {
+  border-color: #bf2600;
+}
+
+.edit-error {
+  color: #bf2600;
+  font-size: 0.75rem;
+  margin-top: 0.1rem;
+}
+
+.card-actions button.btn-save,
+.card-actions button.btn-cancel {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.2rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.card-actions button.btn-save {
+  background: #5aac44;
+  color: #fff;
+  border: none;
+}
+.card-actions button.btn-save:hover {
+  background: #61bd4f;
+}
+.card-actions button.btn-cancel {
+  background: #dfe1e6;
+  color: #172b4d;
+  border: none;
+}
+.card-actions button.btn-cancel:hover {
+  background: #c1c7d0;
+}
